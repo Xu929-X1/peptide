@@ -1,9 +1,9 @@
 {
   "name": "peptide",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Xu929",
+  "license": "MIT",
   "description": "",
   "type": "module",
   "main": "./dist/index.cjs",
