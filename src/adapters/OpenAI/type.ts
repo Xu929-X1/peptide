@@ -5,6 +5,6 @@ export interface OpenAIAdapterConfig {
     client: OpenAI;
 }
 
-export type OpenAIRequestNonStreaming = ResponseCreateParamsNonStreaming & { stream?: false }
-export type OpenAIRequestStreaming = ResponseCreateParamsStreaming & { stream?: true }
+export type OpenAIRequestNonStreaming = ResponseCreateParamsNonStreaming
+export type OpenAIRequestStreaming = ResponseCreateParamsStreaming
 export type OpenAIRequest = OpenAIRequestNonStreaming | OpenAIRequestStreaming;

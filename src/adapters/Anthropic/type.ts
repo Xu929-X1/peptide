@@ -5,6 +5,6 @@ export interface AnthropicAdapterConfig {
     client: Anthropic; //user need to create their own client and pass it in
 }
 
-export type AnthropicRequestNonStreaming = MessageCreateParamsNonStreaming & { stream?: false }
-export type AnthropicRequestStreaming = MessageCreateParamsStreaming & { stream: true }
+export type AnthropicRequestNonStreaming = MessageCreateParamsNonStreaming 
+export type AnthropicRequestStreaming = MessageCreateParamsStreaming
 export type AnthropicRequest = AnthropicRequestNonStreaming | AnthropicRequestStreaming
