@@ -13,7 +13,6 @@ export async function callAnthropic(
 ): Promise<never>
 export async function callAnthropic(config: AnthropicAdapterConfig, request: AnthropicRequest): Promise<AnthropicAdapterResponse> {
 
-    const response = await config.client.messages.create(request);
     if (isStreamingRequest(request)) {
         throw new Error('Streaming not supported yet')
     }
