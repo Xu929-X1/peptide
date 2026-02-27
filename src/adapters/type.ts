@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk"
-import { OpenAI } from "openai/client"
+import type { Response as OpenAIResponse } from 'openai/resources/responses/responses'
 
 export interface AdapterResponse {
     content: string,
@@ -18,5 +18,5 @@ export interface AnthropicAdapterResponse extends AdapterResponse {
 }
 
 export interface OpenAIAdapterResponse extends AdapterResponse {
-    raw: OpenAI.Chat.Completions.ChatCompletion
+    raw: OpenAIResponse
 }
