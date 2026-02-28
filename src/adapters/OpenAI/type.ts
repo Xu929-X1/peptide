@@ -1,10 +1,9 @@
 import { OpenAI } from "openai/client.js";
-import { ResponseCreateParamsNonStreaming, ResponseCreateParamsStreaming } from "openai/resources/responses/responses.js";
 
 export interface OpenAIAdapterConfig {
     client: OpenAI;
 }
 
-export type OpenAIRequestNonStreaming = ResponseCreateParamsNonStreaming
-export type OpenAIRequestStreaming = ResponseCreateParamsStreaming
+export type OpenAIRequestNonStreaming = OpenAI.Responses.ResponseCreateParamsNonStreaming
+export type OpenAIRequestStreaming = OpenAI.Responses.ResponseCreateParamsStreaming
 export type OpenAIRequest = OpenAIRequestNonStreaming | OpenAIRequestStreaming;

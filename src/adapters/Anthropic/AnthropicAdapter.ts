@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { AnthropicAdapterResponse } from "../type";
-import { AnthropicAdapterConfig, AnthropicRequest, AnthropicRequestNonStreaming, AnthropicRequestStreaming } from "./type";
+import { AnthropicAdapterResponse } from "../type.ts";
+import { AnthropicAdapterConfig, AnthropicRequest, AnthropicRequestNonStreaming, AnthropicRequestStreaming } from "./type.ts";
 export async function callAnthropic(
     config: AnthropicAdapterConfig,
     params: AnthropicRequestNonStreaming
@@ -36,6 +36,10 @@ export async function callAnthropic(config: AnthropicAdapterConfig, request: Ant
     }
 
 }
+
+callAnthropic.inputShape = "anthropic";
+
 export function isStreamingRequest(req: AnthropicRequest): req is AnthropicRequestStreaming {
     return req.stream === true
 }
+

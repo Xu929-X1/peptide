@@ -1,5 +1,5 @@
-import { OpenAIAdapterResponse } from "../type";
-import { OpenAIAdapterConfig, OpenAIRequest, OpenAIRequestStreaming } from "./type";
+import { OpenAIAdapterResponse } from "../type.ts";
+import { OpenAIAdapterConfig, OpenAIRequest, OpenAIRequestStreaming } from "./type.ts";
 
 export async function callOpenAI(config: OpenAIAdapterConfig, request: OpenAIRequest): Promise<OpenAIAdapterResponse> {
 
@@ -19,6 +19,8 @@ export async function callOpenAI(config: OpenAIAdapterConfig, request: OpenAIReq
         raw
     }
 }
+
+callOpenAI.inputShape = "openai";
 
 export function isStreamingRequest(req: OpenAIRequest): req is OpenAIRequestStreaming {
     return req.stream === true

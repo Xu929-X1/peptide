@@ -1,10 +1,9 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { MessageCreateParamsNonStreaming, MessageCreateParamsStreaming } from "@anthropic-ai/sdk/resources";
 
 export interface AnthropicAdapterConfig {
-    client: Anthropic; //user need to create their own client and pass it in
+    client: Anthropic;
 }
 
-export type AnthropicRequestNonStreaming = MessageCreateParamsNonStreaming 
-export type AnthropicRequestStreaming = MessageCreateParamsStreaming
+export type AnthropicRequestNonStreaming = Anthropic.MessageCreateParamsNonStreaming
+export type AnthropicRequestStreaming = Anthropic.MessageCreateParamsStreaming
 export type AnthropicRequest = AnthropicRequestNonStreaming | AnthropicRequestStreaming

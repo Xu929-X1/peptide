@@ -1,5 +1,5 @@
-import { AdapterResponse } from "../adapters/type";
-import { PeptideInput } from "../core/type";
+import { AdapterResponse } from "../adapters/type.ts";
+import { PeptideInput } from "../core/type.ts";
 
 export interface PeptideHooks {
     beforeCall?: (input: PeptideInput) => void | Promise<void>,
