@@ -20,7 +20,7 @@ export async function callOpenAI(config: OpenAIAdapterConfig, request: OpenAIReq
     }
 }
 
-callOpenAI.inputShape = "openai";
+callOpenAI.inputShape = "openai" as const;
 
 export function isStreamingRequest(req: OpenAIRequest): req is OpenAIRequestStreaming {
     return req.stream === true

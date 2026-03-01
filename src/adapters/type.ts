@@ -1,11 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk"
 import type { Response as OpenAIResponse } from 'openai/resources/responses/responses'
 
-
-export interface AdapterMeta<TRequest, TModel extends string> {
-    modelType: TModel
-}
-
 export interface AdapterResponse {
     content: string,
     model: string,

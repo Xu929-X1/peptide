@@ -37,7 +37,7 @@ export async function callAnthropic(config: AnthropicAdapterConfig, request: Ant
 
 }
 
-callAnthropic.inputShape = "anthropic";
+callAnthropic.inputShape = "anthropic" as const;
 
 export function isStreamingRequest(req: AnthropicRequest): req is AnthropicRequestStreaming {
     return req.stream === true
